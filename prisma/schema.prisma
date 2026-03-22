@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AthleteIntake {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+
+  // Step 1 — About you
+  firstName    String
+  lastName     String
+  email        String
+  age          String
+  location     String
+
+  // Step 2 — Running background
+  mileage      String
+  yearsRunning String
+  recentRace   String?
+  injuries     String?
+
+  // Step 3 — Goals
+  goal         String
+  targetRace   String?
+  challenge    String?
+
+  // Step 4 — Logistics
+  daysPerWeek  String
+  commsPref    String
+  budget       String
+  notes        String?
+
+  // Internal — for you to track where each athlete is
+  status       String   @default("new") // new | contacted | onboarded | declined
+}
