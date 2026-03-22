@@ -3,7 +3,7 @@ import IntakeForm from '@/components/IntakeForm'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Stride Coaching',
+  title: 'Coached by Liam',
   description: 'Personalized distance running coaching from a D1 athlete.',
 }
 
@@ -15,7 +15,7 @@ export default function Home() {
       <div className="divider" />
 
       <section className="about">
-        <p className="about-label">About the coach</p>
+        <p className="about-label">About Me</p>
         <div className="about-content">
           <div className="about-photo-wrapper">
                 <Image src="/coach.JPG" alt="/" width={280} height={300}className="about-photo" />
@@ -73,6 +73,9 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <footer className="site-footer">
+        <p>© {new Date().getFullYear()} Stride Coaching. All rights reserved.</p>
+      </footer>
     </main>
   )
 }
