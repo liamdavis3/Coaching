@@ -18,15 +18,17 @@ export default function Home() {
         <p className="about-label">About the coach</p>
         <div className="about-content">
           <div className="about-photo-wrapper">
-                <Image src="/coach.jpg" alt="/" width={280} height={300}className="about-photo" />
+                <Image src="/coach.JPG" alt="/" width={280} height={300}className="about-photo" />
           </div>
         <div>
           <h2 className="about-title">Training rooted in experience</h2>
           <p className="about-body">
-            I&apos;ve been competing in distance events at the D1 level while studying Computer
-            Science and Economics. I understand the data behind performance — from lactate
-            thresholds to race-day nutrition — and I build plans that fit real life: jobs,
-            classes, family, and everything in between.
+            I&apos;ve been competing in distance events throughout my whole life, and now at the D1 level 
+            while studying Computer Science and Economics. 
+            I understand the struggles that come with training and performance, so I can approach training 
+            in a way that suits not only fitness goals, but reality of life as well. I want to help anyone
+            I can reach their goals, and that is why I hope to use the experience and knowledge I have gained
+            to help you achieve you goals as well. 
           </p>
           <div className="credentials">
             <span className="badge badge-orange">D1 Distance Runner</span>

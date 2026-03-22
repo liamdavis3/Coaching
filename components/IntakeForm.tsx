@@ -346,10 +346,9 @@ export default function IntakeForm() {
                 <select value={formData.budget}
                   onChange={(e) => update('budget', e.target.value)}>
                   <option value="">Select</option>
-                  <option>Under $50/month</option>
-                  <option>$50–100/month</option>
-                  <option>$100–150/month</option>
-                  <option>$150+/month</option>
+                  <option>$25/month</option>
+                  <option>$50/month</option>
+                  <option>$100/month</option>
                   <option>Flexible — depends on the plan</option>
                 </select>
               </Field>
