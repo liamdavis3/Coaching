@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 const NAV_LINKS = [
   { label: 'Home',     href: '#home' },
   { label: 'About',    href: '#about' },
-  { label: 'Apply',    href: '#intake-form' },
+  { label: 'Testimony',    href: '#testimonials' },
 ]
 
 export default function StickyNav() {
@@ -17,10 +17,10 @@ export default function StickyNav() {
       setScrolled(window.scrollY > 20)
 
       //highlight active section
-      const sections = ['home', 'about', 'intake-form']
+      const sections = ['home', 'about', 'testimonials']
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id)
-        if (el && window.scrollY >= el.offsetTop - 120) {
+        if (el && window.scrollY >= el.offsetTop - 140) {
           setActiveSection(id)
           break
         }
@@ -46,7 +46,7 @@ export default function StickyNav() {
           className="sticky-nav-logo"
           onClick={(e) => handleClick(e, '#home')}
         >
-          Stride Coaching
+          Next Mile Distance Project
         </a>
 
         <div className="sticky-nav-links">
@@ -65,7 +65,7 @@ export default function StickyNav() {
             onClick={(e) => handleClick(e, '#intake-form')}
             className="sticky-nav-cta"
           >
-            Apply for coaching
+            Apply
           </a>
         </div>
       </div>

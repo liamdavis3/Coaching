@@ -1,6 +1,7 @@
 import HeroSection from '@/components/HeroSection'
 import IntakeForm from '@/components/IntakeForm'
 import StickyNav  from '@/components/StickyNav'
+import Testimonials from '@/components/Testimonials'
 import Image from 'next/image'
 
 export const metadata = {
@@ -44,6 +45,10 @@ export default function Home() {
         </div>
         </div>
       </section>
+
+      <div className="divider" />
+      
+      <Testimonials />
 
       <div className="divider" />
 
