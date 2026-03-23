@@ -7,9 +7,9 @@ export default function HeroSection() {
           Run faster. <em>Train smarter.</em>
         </h1>
         <p className="hero-body">
-          Personalized distance running coaching built around your life — not a generic
-          plan. I&apos;m a D1 collegiate runner who coaches based on real racing experience,
-          sports science, and your individual goals.
+          Personalized distance running coaching built around your life - not a generic
+          plan. I&apos;m a D1 collegiate runner who coaches based on real life mistakes and experiences
+          I have gained throughout my career of what works and does not.
         </p>
         {/* Scroll to form — needs client interactivity, so use an anchor instead */}
         <a href="#intake-form" className="hero-cta">
@@ -19,8 +19,8 @@ export default function HeroSection() {
 
       <div className="hero-stats">
         <div className="stat-card">
-          <div className="stat-num">1:1</div>
-          <div className="stat-label">Athlete-to-coach ratio</div>
+          <div className="stat-num">Realistic</div>
+          <div className="stat-label">Price modeling</div>
         </div>
         <div className="stat-card">
           <div className="stat-num">D1</div>
