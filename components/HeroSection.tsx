@@ -1,6 +1,8 @@
+import { ScrollBehavior } from "next/dist/client/components/router-reducer/router-reducer-types";
+
 export default function HeroSection() {
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <div>
         <p className="hero-eyebrow">D1 Athlete · Personal Coaching</p>
         <h1 className="hero-title">

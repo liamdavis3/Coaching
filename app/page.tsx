@@ -1,5 +1,6 @@
 import HeroSection from '@/components/HeroSection'
 import IntakeForm from '@/components/IntakeForm'
+import StickyNav  from '@/components/StickyNav'
 import Image from 'next/image'
 
 export const metadata = {
@@ -9,12 +10,16 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="page">
+    <>  
+      <StickyNav />
+    
+    <main className="page">  
+
       <HeroSection />
 
       <div className="divider" />
 
-      <section className="about">
+      <section id="about" className="about">
         <p className="about-label">About Me</p>
         <div className="about-content">
           <div className="about-photo-wrapper">
@@ -77,5 +82,6 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Stride Coaching. All rights reserved.</p>
       </footer>
     </main>
+    </>
   )
 }
