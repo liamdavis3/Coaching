@@ -30,7 +30,11 @@ body {
 .page {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+  padding: 5rem 1rem 4rem;
+}
+
+@media (min-width: 640px) {
+  .page { padding: 5rem 1.5rem 4rem; }
 }
 
 .divider {
@@ -41,11 +45,19 @@ body {
 
 /* ── Hero ── */
 .hero {
-  padding: 4rem 0 3rem;
+  padding: 2rem 0 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   align-items: center;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 4rem 0 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
 }
 
 .hero-eyebrow {
@@ -92,6 +104,13 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   transition: background 0.2s;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .hero-cta { width: auto; }
 }
 
 .hero-cta:hover {
@@ -290,7 +309,11 @@ body {
 
 /* ── Form body ── */
 .form-body {
-  padding: 2rem;
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .form-body { padding: 2rem; }
 }
 
 .form-step-title {
@@ -331,7 +354,7 @@ body {
 .field select,
 .field textarea {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   padding: 0.65rem 0.85rem;
   border: 0.5px solid var(--border);
   border-radius: 6px;
@@ -339,6 +362,15 @@ body {
   color: var(--text);
   outline: none;
   transition: border-color 0.15s;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 14px;
+  }
 }
 
 .field input:focus,
@@ -402,6 +434,7 @@ body {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 0.5px solid var(--border);
+  gap: 0.75rem;
 }
 
 .btn-ghost {
@@ -411,11 +444,12 @@ body {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
-  padding: 0.7rem 1.5rem;
+  padding: 0.85rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
   letter-spacing: 0.04em;
   transition: all 0.15s;
+  min-height: 44px;
 }
 
 .btn-ghost:hover {
@@ -429,12 +463,13 @@ body {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
-  padding: 0.7rem 1.75rem;
+  padding: 0.85rem 1.75rem;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   letter-spacing: 0.04em;
   transition: background 0.2s;
+  min-height: 44px;
 }
 
 .btn-primary:hover {
@@ -515,18 +550,13 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .about-content{
+  .about-content {
     grid-template-columns: 1fr;
   }
 
-  .about-photo{
-    width:100%;
+  .about-photo {
+    width: 100%;
     height: 300px;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .hero-title {
@@ -554,12 +584,20 @@ body {
     display: none;
   }
 
-  .sticky-nav-links .sticky-nav-link {
+  .sticky-nav-link {
     display: none;
   }
 
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-header {
+    padding: 1.25rem;
+  }
+
+  .testimonial-card:hover {
+    transform: none;
   }
 }
 
@@ -974,6 +1012,7 @@ html {
 .sticky-nav-scrolled {
   background: rgba(247, 245, 242, 0.92);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 0.5px solid var(--border);
   padding: 0.85rem 1.5rem;
 }
@@ -1037,10 +1076,7 @@ html {
   background: var(--accent-light);
 }
 
-/* Push page content below fixed nav */
-.page {
-  padding-top: 5rem;
-}
+/* padding-top handled in .page declaration above */
 
 /* ── Testimonials ── */
 .testimonials-section {
